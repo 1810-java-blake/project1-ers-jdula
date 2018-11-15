@@ -23,7 +23,7 @@ export class AllReimbursementsComponent extends React.Component {
 
   render() {
     const reimbursements = this.state.reimbursements;
-    let count = 0;
+    let count = 1;
     let taaTable = reimbursements.map((taa) => 
     <tr>
         <td>{count++}</td>

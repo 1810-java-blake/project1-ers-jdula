@@ -11,7 +11,7 @@ export class AllPreviousReimbursementComponent extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8088/Project1/users/id', {
+    fetch(`http://localhost:8088/Project1/user/${this.state.id}`, {
       credentials: 'include'
     })
       .then(resp => resp.json())
@@ -24,6 +24,21 @@ export class AllPreviousReimbursementComponent extends React.Component {
   }
 
   render() {
+    const reimbursements = this.state.reimbursements;
+    let count = 1;
+    let taaTable = reimbursements.map((taa) => 
+    <tr>
+        <td>{count++}</td>
+        <td>{taa.re_amount}</td>
+        <td>{taa.re_submitted}</td>
+        <td>{taa.re_resolved}</td>
+        <td>{taa.re_description}</td>
+        <td>{taa.reimb_author}</td>
+        <td>{taa.reimb_resolver}</td>
+        <td>{taa.reimb_status}</td>
+        <td>{taa.reimb_type}</td>
+    </tr>
+    );
     return (
       <div>
         <h1>Your Previous Reimbursements</h1>
@@ -40,9 +55,7 @@ export class AllPreviousReimbursementComponent extends React.Component {
               <th className='table-header'>status</th>
               <th className='table-header'>type</th>
             </tr>
-            <tr>
-              
-            </tr>
+            {taaTable}
           </tbody>
         </table>
       </div>

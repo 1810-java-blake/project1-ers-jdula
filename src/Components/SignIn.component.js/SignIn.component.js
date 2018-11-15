@@ -27,7 +27,7 @@ export class SignInComponent extends React.Component {
   submit = (e) => {
     e.preventDefault();
     let cred = this.state;
-    fetch('http://localhost:8088/Project1/users/login', {
+    fetch('http://localhost:8088/Project1/user/login', {
       method: 'POST',
       body: JSON.stringify(cred),
       headers: {
