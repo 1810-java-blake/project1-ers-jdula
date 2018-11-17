@@ -1,4 +1,5 @@
 import React from 'react';
+import { ADComponent } from '../Approve-Deny/Approve-Deny.component';
 
 export class AllReimbursementsComponent extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ export class AllReimbursementsComponent extends React.Component {
         <td>{taa.reimb_resolver}</td>
         <td>{taa.reimb_status}</td>
         <td>{taa.reimb_type}</td>
+        <td><ADComponent/></td>
     </tr>
     );
     return (
@@ -52,6 +54,7 @@ export class AllReimbursementsComponent extends React.Component {
               <th className='table-header'>resolver</th>
               <th className='table-header'>status</th>
               <th className='table-header'>type</th>
+              <th className='table-header'>Approve/Deny?</th>
             </tr>
               {taaTable}
           </tbody>

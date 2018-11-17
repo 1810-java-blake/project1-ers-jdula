@@ -21,6 +21,16 @@
   font-style: normal;
 }
 
+#approve-button{
+  background-color: rgb(32, 95, 32);
+  color:white;
+}
+
+#deny-button{
+  background-color: rgb(160, 25, 25);
+  color:white;
+}
+
 /*****************************
 flex-box configs
 *****************************/

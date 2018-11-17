@@ -5,13 +5,12 @@ export class AllPreviousReimbursementComponent extends React.Component {
     super(props);
 
     this.state = {
-      reimbursements: [],
-      id: 0
+      reimbursements: []
     }
   }
 
   componentDidMount() {
-    fetch(`http://localhost:8088/Project1/user/${this.state.id}`, {
+    fetch(`http://localhost:8088/Project1/user/id`, {
       credentials: 'include'
     })
       .then(resp => resp.json())

@@ -37,7 +37,7 @@ export class SignInComponent extends React.Component {
     })
       .then(res => {
         if (res.status === 200) {
-          this.props.history.push('/user/add');
+          this.props.history.push('/user/home');
         }
       })
       .catch(err => {
