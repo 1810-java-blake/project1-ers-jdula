@@ -24,10 +24,9 @@ export class AllPreviousReimbursementComponent extends React.Component {
 
   render() {
     const reimbursements = this.state.reimbursements;
-    let count = 1;
     let taaTable = reimbursements.map((taa) => 
     <tr>
-        <td>{count++}</td>
+        <td>{taa.re_id}</td>
         <td>{taa.re_amount}</td>
         <td>{taa.re_submitted}</td>
         <td>{taa.re_resolved}</td>

@@ -1,11 +1,13 @@
 import React from 'react';
 import { ADComponent } from '../Approve-Deny/Approve-Deny.component';
+import '../../Include/bootstrap';
 
 export class AllReimbursementsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reimbursements: []
+      reimbursements: [],
+      filterBool: false
     }
   }
 
@@ -24,24 +26,23 @@ export class AllReimbursementsComponent extends React.Component {
 
   render() {
     const reimbursements = this.state.reimbursements;
-    let count = 1;
     let taaTable = reimbursements.map((taa) => 
     <tr>
-        <td>{count++}</td>
-        <td>{taa.re_amount}</td>
-        <td>{taa.re_submitted}</td>
-        <td>{taa.re_resolved}</td>
-        <td>{taa.re_description}</td>
-        <td>{taa.reimb_author}</td>
-        <td>{taa.reimb_resolver}</td>
-        <td>{taa.reimb_status}</td>
-        <td>{taa.reimb_type}</td>
+        <td className = "re_id">{taa.re_id}</td>
+        <td className = "re_amount">{taa.re_amount}</td>
+        <td className = "re_submitted">{taa.re_submitted}</td>
+        <td className = "re_resolved">{taa.re_resolved}</td>
+        <td className = "re_description">{taa.re_description}</td>
+        <td className = "re_author">{taa.reimb_author}</td>
+        <td className = "re_resolver">{taa.reimb_resolver}</td>
+        <td className = "re_status">{taa.reimb_status}</td>
+        <td className = "re_type">{taa.reimb_type}</td>
         <td><ADComponent/></td>
     </tr>
     );
     return (
       <div>
-        <h1>All Reimbursements</h1>
+        <h1>All Reimbursements <button className="btn btn-primary btn-default" id="filter-button" onClick>Filter by Status</button></h1>       
         <table className='table-container'>
           <tbody>
             <tr>
