@@ -83,14 +83,14 @@ export class AddNewReimbursementComponent extends React.Component {
           value={this.state.re_description}
           onChange={this.descriptionChange} />
 
-        <label htmlFor="input">Date</label>
+        {/* <label htmlFor="input">Date</label>
         <input type="text"
           id="input-date"
           className="form-control"
           placeholder="yyyy-mm-dd"
           required
           value={this.state.re_submitted}
-          onChange={this.submittedChange} />
+          onChange={this.submittedChange} /> */}
 
         {/* <label htmlFor="input" >Type</label><br />
         <input type="radio" name="type" onChange={this.setState({...this.state, re_type: "1"})} />Lodging <br />

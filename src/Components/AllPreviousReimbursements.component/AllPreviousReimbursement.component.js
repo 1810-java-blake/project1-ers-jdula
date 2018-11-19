@@ -24,6 +24,7 @@ export class AllPreviousReimbursementComponent extends React.Component {
 
   render() {
     const reimbursements = this.state.reimbursements;
+
     let taaTable = reimbursements.map((taa) => 
     <tr>
         <td>{taa.re_id}</td>
