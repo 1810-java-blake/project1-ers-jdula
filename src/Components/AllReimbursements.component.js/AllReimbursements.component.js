@@ -107,16 +107,16 @@ export class AllReimbursementsComponent extends React.Component {
     if (this.state.filterAll === true) {
       taaTable = reimbursements.map((taa) =>
         <tr>
-          <td className="re_id">{taa.re_id}</td>
-          <td className="re_amount">{taa.re_amount}</td>
-          <td className="re_submitted">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
-          <td className="re_resolved">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
-          <td className="re_description">{taa.re_description}</td>
-          <td className="re_author">{taa.reimb_author}</td>
-          <td className="re_resolver">{taa.reimb_resolver}</td>
-          <td className="re_status">{taa.reimb_status}</td>
-          <td className="re_type">{taa.reimb_type}</td>
-          <td><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
+          <td className="re">{taa.re_id}</td>
+          <td className="re">{taa.re_amount}</td>
+          <td className="re">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
+          <td className="re">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
+          <td className="re">{taa.re_description}</td>
+          <td className="re">{taa.reimb_author}</td>
+          <td className="re">{taa.reimb_resolver}</td>
+          <td className="re">{taa.reimb_status}</td>
+          <td className="re">{taa.reimb_type}</td>
+          <td className="re"><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
         </tr>
       );
     } else if (this.state.filterApproved === true) {
@@ -124,48 +124,48 @@ export class AllReimbursementsComponent extends React.Component {
         return el.reimb_status === 'Approved';
       }).map((taa) =>
         <tr>
-          <td className="re_id">{taa.re_id}</td>
-          <td className="re_amount">{taa.re_amount}</td>
-          <td className="re_submitted">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
-          <td className="re_resolved">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
-          <td className="re_description">{taa.re_description}</td>
-          <td className="re_author">{taa.reimb_author}</td>
-          <td className="re_resolver">{taa.reimb_resolver}</td>
-          <td className="re_status">{taa.reimb_status}</td>
-          <td className="re_type">{taa.reimb_type}</td>
-          <td><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
+          <td className="re">{taa.re_id}</td>
+          <td className="re">{taa.re_amount}</td>
+          <td className="re">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
+          <td className="re">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
+          <td className="re">{taa.re_description}</td>
+          <td className="re">{taa.reimb_author}</td>
+          <td className="re">{taa.reimb_resolver}</td>
+          <td className="re">{taa.reimb_status}</td>
+          <td className="re">{taa.reimb_type}</td>
+          <td className="re"><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
         </tr>);
     } else if (this.state.filterDenied === true) {
       taaTable = reimbursements.filter(function (el) {
         return el.reimb_status === 'Denied';
       }).map((taa) =>
         <tr>
-          <td className="re_id">{taa.re_id}</td>
-          <td className="re_amount">{taa.re_amount}</td>
-          <td className="re_submitted">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
-          <td className="re_resolved">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
-          <td className="re_description">{taa.re_description}</td>
-          <td className="re_author">{taa.reimb_author}</td>
-          <td className="re_resolver">{taa.reimb_resolver}</td>
-          <td className="re_status">{taa.reimb_status}</td>
-          <td className="re_type">{taa.reimb_type}</td>
-          <td><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
+          <td className="re">{taa.re_id}</td>
+          <td className="re">{taa.re_amount}</td>
+          <td className="re">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
+          <td className="re">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
+          <td className="re">{taa.re_description}</td>
+          <td className="re">{taa.reimb_author}</td>
+          <td className="re">{taa.reimb_resolver}</td>
+          <td className="re">{taa.reimb_status}</td>
+          <td className="re">{taa.reimb_type}</td>
+          <td className="re"><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
         </tr>);
     } else if (this.state.filterPending === true) {
       taaTable = reimbursements.filter(function (el) {
         return el.reimb_status === 'Pending';
       }).map((taa) =>
         <tr>
-          <td className="re_id">{taa.re_id}</td>
-          <td className="re_amount">{taa.re_amount}</td>
-          <td className="re_submitted">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
-          <td className="re_resolved">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
-          <td className="re_description">{taa.re_description}</td>
-          <td className="re_author">{taa.reimb_author}</td>
-          <td className="re_resolver">{taa.reimb_resolver}</td>
-          <td className="re_status">{taa.reimb_status}</td>
-          <td className="re_type">{taa.reimb_type}</td>
-          <td><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
+          <td className="re">{taa.re_id}</td>
+          <td className="re">{taa.re_amount}</td>
+          <td className="re">{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
+          <td className="re">{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
+          <td className="re">{taa.re_description}</td>
+          <td className="re">{taa.reimb_author}</td>
+          <td className="re">{taa.reimb_resolver}</td>
+          <td className="re">{taa.reimb_status}</td>
+          <td className="re">{taa.reimb_type}</td>
+          <td className="re"><ADComponent reimbursements={this.state.reimbursements} re_id={taa.re_id} handleAClick={() => this.handleAClick} handleDClick={() => this.handleDClick} /></td>
         </tr>);
     }
     return (

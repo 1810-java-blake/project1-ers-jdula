@@ -49,7 +49,7 @@ export class SignInComponent extends React.Component {
   render() {
     return (
       <form className="form-signin" onSubmit={this.submit}>
-        <h1 className="h3 mb-3 font-weight-normal">Please sign in to Revature</h1>
+        <h1 className="h3 mb-3 font-weight-normal">Please sign in to ERS</h1>
 
         <label htmlFor="input-username" className="sr-only">Username</label>
         <input type="text"
@@ -74,7 +74,6 @@ export class SignInComponent extends React.Component {
           type="submit">
           Sign in
         </button>
-        <p className="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
       </form>
     )
   }
