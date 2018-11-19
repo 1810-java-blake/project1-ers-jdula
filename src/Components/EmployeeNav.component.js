@@ -20,15 +20,6 @@ export class AppNav extends React.Component {
                 <Link to="/sign-in" className="unset-anchor nav-link">Sign In</Link>
               </li>
               <li className="nav-item active">
-                <Link to="/user/id" className="unset-anchor nav-link">View Old Reimbursements</Link>
-              </li>
-              <li className="nav-item active">
-                <Link to="/user/add" className="unset-anchor nav-link">Add new Reimbursement</Link>
-              </li>
-              <li className="nav-item active">
-                <Link to="/user" className="unset-anchor nav-link">View all Reimbursements</Link>
-              </li>
-              <li className="nav-item active">
                 <Link to="/user/home" className="unset-anchor nav-link">Home</Link>
               </li>
             </ul>

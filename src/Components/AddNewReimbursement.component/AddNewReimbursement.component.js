@@ -7,14 +7,14 @@ export class AddNewReimbursementComponent extends React.Component {
 
     this.state = {
       re_id: 0,
-      re_amount: 0,
+      re_amount: '',
       re_submitted: '',
       re_resolved: '',
       re_description: '',
       re_author: 0,
       re_resolver: 0,
       re_status: 1,
-      re_type: 1
+      re_type: ''
     }
   }
 

@@ -35,14 +35,15 @@ export class SignInComponent extends React.Component {
       },
       credentials: 'include'
     })
-      .then(res => {
-        if (res.status === 200) {
-          this.props.history.push('/user/home');
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      })
+    .then(res => {
+      if (res.status === 200) {
+        this.props.history.push('user/home');
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    })
+      
   }
 
   render() {

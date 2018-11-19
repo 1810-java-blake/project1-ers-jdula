@@ -24,13 +24,12 @@ export class AllPreviousReimbursementComponent extends React.Component {
 
   render() {
     const reimbursements = this.state.reimbursements;
-
     let taaTable = reimbursements.map((taa) => 
     <tr>
         <td>{taa.re_id}</td>
         <td>{taa.re_amount}</td>
-        <td>{taa.re_submitted}</td>
-        <td>{taa.re_resolved}</td>
+        <td>{(new Date(taa.re_submitted)).toLocaleDateString()}</td>
+        <td>{(new Date(taa.re_resolved)).toLocaleDateString()}</td>
         <td>{taa.re_description}</td>
         <td>{taa.reimb_author}</td>
         <td>{taa.reimb_resolver}</td>
